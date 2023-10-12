@@ -4,7 +4,8 @@
      box-sizing: border-box;
 }
 :root{
-     --primary-text-color : #E26A2C;
+     --primary-color : #01B0A7;
+     --seconder-text-color : #E26A2C;
 }
 
 /* header */
@@ -32,7 +33,7 @@
      border-right: 1px solid wheat;
 }
 .left{
-     color: #E26A2C;
+     color: var(--seconder-text-color);
      font-size: 12px;
      font-family: DM Sans;
      font-weight: 700;
@@ -42,6 +43,7 @@
 .head-img{
      height: 30px;
 }
+ 
 
 
 
