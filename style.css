@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  
+}
+a{
+     text-decoration: none;
 }
 :root {
   --primary-color: #01b0a7;
@@ -20,7 +25,8 @@
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  background-color: black;
+  background: #2E2E2E;
+  z-index: 1 !important;
 }
 .head-text {
   display: flex;
@@ -45,19 +51,39 @@
   line-height: 24px;
   padding-left: 20px;
 }
-.head-img {
-  height: 25px;
+.social{
+     display: flex;
+     justify-content: space-evenly;
+     gap: 30px;
+     z-index: 1;
 }
-.ac {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 32px;
+.social a i{
+     color: #E6F7F6;
 }
-.ac:hover {
-  text-decoration: underline;
-  color: var(--seconder-text-color);
+/* navbar  */
+nav{
+     display: flex;
+     justify-content: space-between;
+     align-items: end;
+     /* background: #01b0a7; */
 }
+.menu{
+     display: flex;
+     gap: 40px;
+}
+.links{
+     color:#fff ;
+     font-family: 'DM Sans';
+     font-weight: 700;
+     font-size: 16px;
+     line-height: 32px;
+     transition: all 0.4s ease-in-out;
+}
+.links:hover{
+     color: #b34813;
+     text-decoration: underline;
+}
+
 .free-btn {
   width: 142px;
   height: 35px;
@@ -73,52 +99,72 @@
   background-color: transparent;
   color: var(--seconder-text-color);
 }
+/* hero section */
+.hero{
+     margin-top: -75px;
+     z-index: -1;
+     position: relative;
+}
+.hero-img{
+     width: 100wh;
+     height: 100%;
+     position: relative;
+}
+.hero-img::before{
+     position: absolute;
+     content: '';
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: radial-gradient(69.58% 69.58% at 50% 50%, rgba(0, 0, 0, 0.82) 0%, #000000 100%);
+     opacity: 0.4;
+}
 
-.hero {
-  background: radial-gradient(71.86% 71.86% at 35.93% 35.93%, rgba(0, 0, 0, 0.82) 0%, black 100%),
-    url("./img/Image-1.jpg") center/cover;
-  height: 780px;
-  top: -170px;
-  position: relative;
-  opacity: 2;
+.hero-img img{
+     width: 100%;
 }
-.hero-text {
-  position: absolute;
-  top: 210px;
-  left: 20%;
-  text-align: center;
+.hero-text{
+     position: absolute;
+     top: 20%;
+     left: 26%;
+     text-align: center;
 }
-.hero-text h3 {
-  color: var(--seconder-text-color);
-  font-size: 24px;
-  font-family: DM Sans;
-  font-weight: 500;
-  line-height: 32px;
-  word-wrap: break-word;
+.hero-text .title {
+     font-family: 'DM Sans';
+     font-weight: 500;
+     font-size: 24px;
+     line-height: 32px;
+     text-align: center;
+     color: #FF8243;
+     z-index: 1;
+     margin-bottom: 35px;
 }
 .hero-text .big {
-  color: white;
-  font-size: 48px;
-  font-family: DM Sans;
-  font-weight: 700;
-  line-height: 63.98px;
-  word-wrap: break-word;
+     font-family: 'DM Sans';
+     font-weight: 700;
+     font-size: 48px;
+     line-height: 64px;
+     text-align: center;
+     color: #FFFFFF;
+     z-index: 1;
+     margin-bottom: 15px;
 }
 .small {
-  color: white;
-  font-size: 18px;
-  font-family: DM Sans;
-  font-weight: 500;
-  line-height: 24px;
-  word-wrap: break-word;
+     font-family: 'DM Sans';
+     font-weight: 500;
+     font-size: 18px;
+     line-height: 24px;
+     text-align: center;
+     color: #FFFFFF;
 }
 .small span {
-  color: #f15203;
-  font-size: 18px;
-  font-family: DM Sans;
-  font-weight: 500;
-  line-height: 24px;
-  word-wrap: break-word;
+     font-family: 'DM Sans';
+     font-weight: 500;
+     font-size: 18px;
+     line-height: 24px;
+     text-align: center;
+     color: #FF8243;
 }
 .buttons {
   color: white;
@@ -127,43 +173,41 @@
   font-weight: 700;
   line-height: 32px;
   word-wrap: break-word;
-  position: absolute;
-  background-color: teal;
+  margin-top: 66px;
+  background: #01B0A7;
   padding: 1px 5px;
-  top: 60%;
-  left: 39%;
+   
 }
 /* next level */
 .next{
-     height: 900px;
-     width: 1440px;
-     margin: 140px auto;
+     padding: 140px 15px;
      /* border: 2px solid red; */
 }
 .next-grid{
+     /* border: 2px solid black; */
      display: grid;
      grid-template-columns: repeat(2, 1fr);
      grid-gap: 10px;
 }
 .next-left{
-     /* border: 2px solid red; */
+      
      height: 800px;
 }
 .next-1st-img{
      width: 244px;
      height: 140px;
-     margin-left: 165px;
+      
 }
 .next-2nd-img{
      width: 540px;
      height: 375px;
-     margin-left: 165px;
+     
 }
 .next-text-left{
      width: 540px;
      height: 258px;
      background-color: #F8ECDE;
-     margin-left: 165px;
+    
 }
 .next-text-left h3{
      color: #2E2E2E;
@@ -200,7 +244,6 @@
      margin-top: 5px;
 }
 .next-right{
-     /* border: 2px solid red; */
      height: 800px;
      display: grid;
      grid-template-columns: repeat(2,1fr);
@@ -209,26 +252,27 @@
 .chield{
      width: 255px;
      height: 218px;
-     /* border: 2px solid gray; */
      margin: 0 auto;
-     position: relative;
+     position: relative;transition: all 0.3s ease-in-out;
 }
 .chield img{
      width: 65px;
      height: 65px;
-     margin: 0 auto;
+      
 }
 .chield .box{
      justify-content: center;
-     /* border: 2px solid pink; */
      position: absolute;
      top: 30px;
-     left: 40px;
+     left: 50px;
      padding: 5px;
 }
 .chield:first-child{
-     background-color: #E6F7F6;
+     background: #E6F7F6;
+}.chield:hover{
+     background: #E6F7F6;
 }
+
 .chield .box img{
      margin-left: 40px;
 }
@@ -246,9 +290,10 @@
 }
 /* next level 2 */
 .next-level2{
+     margin-top: 120px;
      background-color: #F8F8F8;
      width: 100%;
-     /* border: 2px solid rgb(68, 255, 0); */
+    
 }
 .level2-text{
      margin-left: 165px;
@@ -280,10 +325,15 @@
 }
  
 .box{
+     cursor: pointer;
      width: 255px;
+     transition: all 0.3s ease-in-out;
+}
+.box:hover{
+     background: #E6F7F6;
 }
 .box1{
-          background-color: #E6F7F6;
+          background: #E6F7F6;
 }
 .sub-box{
      margin: 30px ;
@@ -325,7 +375,7 @@
      margin-left: 165px;
 }
 .level-text-2p {
-     /* border: 2px solid purple; */
+    
      width: 1097px;
      margin-top: 60px ;
      margin-bottom: 140px;
